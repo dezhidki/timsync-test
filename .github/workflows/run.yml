@@ -1,0 +1,17 @@
+name: Run
+
+on: push
+
+jobs:
+    sync:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - id: timsync
+              run: ./action/entrypoint.sh
+              shell: bash
+              env:
+                TIM_HOST: https://tim.jyu.fi
+                TIM_FOLDER_ROOT: ${{ secrets.TIM_FOLDER_ROOT }}
+                TIM_USERNAME: ${{ secrets.TIM_USERNAME }}
+                TIM_PASSWORD: ${{ secrets.TIM_PASSWORD }}
