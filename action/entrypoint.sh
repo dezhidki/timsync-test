@@ -53,7 +53,7 @@ host = \"${TIM_HOST}\"
 folder_root = \"${TIM_FOLDER_ROOT}\"
 username = \"${TIM_USERNAME}\"
 password = \"${TIM_PASSWORD}\"
-" >> "${ROOT_FOLDER}/.timsync/config.toml"
+" > "${ROOT_FOLDER}/.timsync/config.toml"
 
 log "Syncing with TIM..."
 
