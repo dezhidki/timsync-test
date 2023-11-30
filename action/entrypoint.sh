@@ -46,7 +46,7 @@ log "Initializing timsync..."
 
 cd "${ROOT_FOLDER}"
 "${COMMAND}" init --no-prompt
-
+    
 echo "
 [targets.default]
 host = \"${TIM_HOST}\"

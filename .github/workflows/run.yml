@@ -7,11 +7,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - id: timsync
-              run: ./action/entrypoint.sh
-              shell: bash
-              env:
-                TIM_HOST: https://tim.jyu.fi
-                TIM_FOLDER_ROOT: ${{ secrets.TIM_FOLDER_ROOT }}
-                TIM_USERNAME: ${{ secrets.TIM_USERNAME }}
-                TIM_PASSWORD: ${{ secrets.TIM_PASSWORD }}
+            - uses: JYU-DI/timsync@main
+              with:
+                host: https://tim.jyu.fi
+                folder_root: ${{ secrets.TIM_FOLDER_ROOT }}
+                username: ${{ secrets.TIM_USERNAME }}
+                password: ${{ secrets.TIM_PASSWORD }}
