@@ -48,7 +48,7 @@ cd "${ROOT_FOLDER}"
 "${COMMAND}" init --no-prompt
 
 echo "
-[target.default]
+[targets.default]
 host = \"${TIM_HOST}\"
 folder_root = \"${TIM_FOLDER_ROOT}\"
 username = \"${TIM_USERNAME}\"
